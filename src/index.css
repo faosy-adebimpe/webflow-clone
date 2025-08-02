@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+@theme {
+    --color-primary: #ff5533;
+}
+
 /* base */
 @layer base {
     button {
@@ -7,7 +11,14 @@
     }
 }
 
+/* components */
+@layer components {
+    .link {
+        @apply text-3xl font-medium transition hover:text-primary;
+    }
+}
+
 /* utilities */
 @utility container {
-    @apply p-3 mx-auto max-w-[1440px];
+    @apply p-6 mx-auto max-w-[1440px];
 }
