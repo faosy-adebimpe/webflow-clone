@@ -15,7 +15,7 @@ const Navbar = () => {
 
                 <button
                     className={classNames('w-[30px] h-[38px] relative flex', {
-                        'justify-center items-center': sidebarOpened,
+                        'justify-center items-center h-[30px]': sidebarOpened,
                         'gap-2.5 flex-col justify-center items-end':
                             !sidebarOpened,
                     })}
@@ -23,16 +23,19 @@ const Navbar = () => {
                 >
                     <div
                         className={classNames(
-                            'w-[30px] h-[4px] bg-black rounded-full transition-all',
-                            { 'absolute rotate-45': sidebarOpened }
+                            'w-[30px] h-[4px] bg-black rounded-full transition-all duration-300 absolute origin-bottom',
+                            {
+                                'rotate-134 m-0 mt-0.5': sidebarOpened,
+                                ' mb-3': !sidebarOpened,
+                            }
                         )}
                     ></div>
                     <div
                         className={classNames(
-                            'h-[4px] bg-black rounded-full transition-all',
+                            'h-[4px] bg-black rounded-full transition-all duration-300 absolute',
                             {
-                                'w-[30px] absolute -rotate-45': sidebarOpened,
-                                'w-[20px]': !sidebarOpened,
+                                'w-[30px] rotate-40 mt-2': sidebarOpened,
+                                'w-[20px] mt-3': !sidebarOpened,
                             }
                         )}
                     ></div>
