@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+/* base */
+@layer base {
+    button {
+        @apply cursor-pointer;
+    }
+}
+
+/* utilities */
+@utility container {
+    @apply p-3 mx-auto max-w-[1440px];
+}
