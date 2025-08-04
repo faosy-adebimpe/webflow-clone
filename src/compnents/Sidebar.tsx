@@ -1,12 +1,13 @@
 import classNames from 'classnames';
 import { useModalStore } from '../store/modalStore';
+import { ChevronDownIcon } from 'lucide-react';
 
 const Sidebar = () => {
     const { sidebarOpened } = useModalStore();
     return (
         <section
             className={classNames(
-                'pt-[15vh] w-full h-screen bg-white fixed left-0 top-0 transition-transform duration-300',
+                'pt-[15vh] w-full h-screen bg-white fixed left-0 top-0 transition-transform duration-300 z-10',
                 { '-translate-y-[100vh]': !sidebarOpened }
             )}
             id="sidebar"
@@ -22,13 +23,13 @@ const Sidebar = () => {
                     <a href="#" className="link">
                         Pricing
                     </a>
-                    <a href="#" className="link">
-                        Pages
+                    <a href="#" className="link flex gap-3 items-center">
+                        <span>Pages</span> <ChevronDownIcon />
                     </a>
                 </div>
 
                 <div className="w-full">
-                    <button className="text-white font-medium bg-primary w-full py-5 rounded-xl text-lg">
+                    <button className="text-white font-medium bg-primary w-full py-5 rounded-xl text-lg transition hover:bg-btn-hover">
                         Get started
                     </button>
                 </div>

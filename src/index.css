@@ -1,13 +1,29 @@
 @import 'tailwindcss';
 
 @theme {
-    --color-primary: #ff5533;
+    /* --color-primary: #ff5533; */
+    --color-primary: #ff5634;
+    --color-secondary: #fafafa;
+    /* --color-btn-hover: #ff5634; */
+    --color-btn-hover: #db4526;
+
+    --color-others: #656565;
+
+    /* #656565 */
 }
 
 /* base */
 @layer base {
+    body {
+        @apply scroll-smooth;
+    }
+
     button {
         @apply cursor-pointer;
+    }
+
+    .footer-link {
+        @apply text-black/70 transition hover:text-primary md:text-lg;
     }
 }
 
@@ -15,6 +31,10 @@
 @layer components {
     .link {
         @apply text-3xl font-medium transition hover:text-primary;
+    }
+
+    .btn {
+        @apply transition hover:bg-btn-hover;
     }
 }
 
