@@ -109,7 +109,7 @@ const Navbar = () => {
                             Download app
                         </button>
 
-                        <button className="btn font-bold rounded-[12px] text-lg w-[115px] h-[56px] transition bg-primary text-white mr-[25px] hidden md:block lg:mr-0">
+                        <button className="font-bold rounded-[12px] text-lg w-[115px] h-[56px] bg-primary text-white mr-[25px] hidden md:block lg:mr-0 transition hover:bg-btn-hover">
                             Register
                         </button>
 
