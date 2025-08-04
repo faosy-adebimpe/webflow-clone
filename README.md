@@ -1,69 +1,108 @@
-# React + TypeScript + Vite
+## Folder Structure
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+webflow-clone/
+├── public/           # Static assets
+├── src/              # Source code
+│   ├── assets/       # Images, icons, etc.
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # Route-based components
+│   ├── App.tsx       # Root component
+│   └── main.tsx      # Entry point
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the Repository
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/faosy-adebimpe/webflow-clone.git
+cd webflow-clone
 ```
+
+### 2. Install Dependencies
+
+Make sure you have **Node.js** installed (recommended: `>= 18.x`).
+
+```bash
+npm install
+```
+
+_or if you use Yarn:_
+
+```bash
+yarn install
+```
+
+## Development
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+_or_
+
+```bash
+yarn dev
+```
+
+The app will be running at:
+
+```
+http://localhost:5173
+```
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Output will be in the `dist/` folder.
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## Linting & Formatting (optional)
+
+If you’ve added ESLint or Prettier:
+
+```bash
+npm run lint
+npm run format
+```
+
+## Deployment
+
+You can deploy the `dist/` folder to any static hosting provider such as:
+
+-   [Vercel](https://vercel.com/)
+-   [Netlify](https://www.netlify.com/)
+-   [GitHub Pages](https://pages.github.com/)
+-   [Firebase Hosting](https://firebase.google.com/docs/hosting)
+
+## Tech Stack
+
+-   React
+-   Vite
+-   TypeScript
+-   TailwindCSS
+
+## Customization
+
+You can configure:
+
+-   `vite.config.ts` for build behavior
+-   `tailwind.config.js` for custom Tailwind styles
+-   `.env` files for environment variables

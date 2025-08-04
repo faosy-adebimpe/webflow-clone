@@ -1,0 +1,51 @@
+Install Dependencies
+
+Make sure you have Node.js installed (recommended: version 18 or higher).
+
+To install dependencies using npm:
+
+```
+npm install
+```
+
+Or if you're using Yarn:
+
+```
+yarn install
+```
+
+## Development
+
+To start the development server with npm:
+
+```
+npm run dev
+```
+
+Or with Yarn:
+
+```
+yarn dev
+```
+
+The app will be running at:
+
+```
+http://localhost:5173
+```
+
+## Build for Production
+
+To build the app for production:
+
+```
+npm run build
+```
+
+The output will be in the `dist` folder.
+
+To preview the production build locally:
+
+```
+npm run preview
+```
